@@ -1,3 +1,4 @@
+// Online C++ compiler to run C++ program online
 #include<iostream>
 using namespace std;
 
@@ -9,7 +10,7 @@ void fibonacci(int num){
         return;
     }
     cout<<a<<" "<<b<<" ";
-    for(int i=0;i<num-1;i++){
+    for(int i=1;i<num-1;i++){
         int c = a+b;
         a=b;
         b=c;
@@ -28,8 +29,14 @@ int rec_fibonacci(int num){
 }
 
 int main(){
-    fibonacci(0);
+    int n;
+    cout<<"ENter a number : ";
+    cin>>n;
+    
+    cout<<"Non Recuesive call : ";
+    fibonacci(n);
     cout<<endl;
-    int num = rec_fibonacci(0);
+     cout<<"Recuesive call: ";
+    int num = rec_fibonacci(n);
     cout<<num;
 }
